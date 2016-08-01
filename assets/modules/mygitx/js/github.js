@@ -17,7 +17,7 @@ jQuery.fn.loadRepositories = function(username) {
     $(repos).each(function() {
       list.append('<dt><a target="_blank" href="'+ this.html_url +'"><h3>' + this.name + '</h3></a></dt>');
       list.append('<dd>' + this.description + '</dd>');
-              list.append('<dd><br/><a class="btn btn-default" href="'+ this.html_url +'/archive/master.zip">Download Zip</a></dd><hr/>');
+              list.append('<dd><br/><a target="_blank" class="btn btn-default" href="'+ this.html_url +'/archive/master.zip">Download Zip</a></dd><hr/>');
     });
   });
  
