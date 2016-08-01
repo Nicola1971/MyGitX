@@ -1,7 +1,7 @@
 /**
  * MyGitx
  *
- * Display and download github repositories in MODX Evo
+ * MODX Evo Module to display your github repositories
  * @author      Author: Nicola Lambathakis http://www.tattoocms.it/
  * @version 1.0 Beta
  *
