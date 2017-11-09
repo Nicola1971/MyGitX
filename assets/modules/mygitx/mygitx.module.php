@@ -1,15 +1,4 @@
 <?php
-/*
- * Package Manager
- *
- * @package packagemanager
- * @subpackage module
- *
- * @version 1.0-RC4
- * @author Thomas Jakobi <thomas.jakobi@partout.info>
- * @license http://opensource.org/licenses/gpl-license.php GNU Public License
- */
-
 if (IN_MANAGER_MODE != 'true') {
 	die('<h1>ERROR:</h1><p>Please use the MODx Content Manager instead of accessing this file directly.</p>');
 }
@@ -24,7 +13,7 @@ $output = "<html>
 
 <!-- Bootstrap -->
 <link href='../assets/modules/mygitx/css/bootstrap.min.css' rel='stylesheet'>
-<link href='../assets/modules/mygitx/font-awesome/css/font-awesome.min.css' rel='stylesheet'>
+<link href='media/style/common/font-awesome/css/font-awesome.min.css' rel='stylesheet'>
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <script src='../assets/modules/mygitx/js/jquery-1.11.2.min.js'></script>
 <script src='../assets/modules/mygitx/js/bootstrap.js'></script>
@@ -37,9 +26,9 @@ jQuery(document).ready(function ($) {
   });
 });
 </script>
-<body>
+<body style='overflow-x:hidden';>
 <nav class='navbar navbar-default'>
-  <div class='container'> 
+  <div class='container-fluid'> 
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class='navbar-header'>
       <button type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='#defaultNavbar1'><span class='sr-only'>Toggle navigation</span><span class='icon-bar'></span><span class='icon-bar'></span><span class='icon-bar'></span></button>
@@ -59,7 +48,7 @@ jQuery(document).ready(function ($) {
         <li class='dropdown'><a href='#' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-expanded='false'><i class='fa fa-user fa-lg' aria-hidden='true'></i><span class='caret'></span></a>
           <ul class='dropdown-menu' role='menu'>
        
-            <li><a target='_blank' href='https://github.com/Nicola1971'>Your profile</a></li>
+            <li><a target='_blank' href='https://github.com/$github_username'>Your profile</a></li>
             <li><a target='_blank' href='https://github.com/stars'>Your stars</a></li>
             <li><a target='_blank' href='https://github.com/explore'>Explore</a></li>
             <li><a target='_blank' href='https://github.com/integrations'>Integrations</a></li>
@@ -76,14 +65,6 @@ jQuery(document).ready(function ($) {
   <!-- /.container-fluid --> 
 </nav>
 <div class='container-fluid'>
-  <div class='row'>
-    <div class='col-md-6 col-md-offset-3'>
-      <h1 class='text-center'>MyGitX</h1>
-    </div>
-  </div>
-  <hr>
-</div>
-<div class='container'>
 <ul class='nav nav-tabs'>
   <li class='active'><a data-toggle='tab' href='#home'>MyGit</a></li>
   <li><a data-toggle='tab' href='#searchuser'>Search user</a></li>
@@ -91,7 +72,7 @@ jQuery(document).ready(function ($) {
 
 <div class='tab-content'>
   <div id='home' class='tab-pane fade in active'>
-    <h3>$github_username github repositories </h3>
+    <h3 class='text-center'>$github_username github repositories </h3>
       <div class='row text-left'>
       <div class='container'>
     <div class='col-md-12'><div id='github-projects'></div></div>
@@ -119,8 +100,8 @@ jQuery(document).ready(function ($) {
   <hr>
   <div class='row'>
     <div class='text-center col-md-6 col-md-offset-3'>
-      <h4><i class='fa fa-github fa-lg' aria-hidden='true'></i><i class='fa fa-modx fa-lg' aria-hidden='true'></i></h4>
-      <p>MyGitX for modx Evolution</p>
+      <h4><i class='fa fa-github fa-lg' aria-hidden='true'></i></h4>
+      <p>MyGitX for Evolution CMS</p>
     </div>
   </div>
   <hr>
